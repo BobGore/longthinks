@@ -4,7 +4,7 @@ url = "https://lichess.org/api/games/user/"
 params = {
     "max": 50,
     "clocks": True,
-    "perfType": "blitz",
+    "perfType": "classical",
 }
 
 def get_games(username):

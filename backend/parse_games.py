@@ -1,7 +1,7 @@
 import chess
 import chess.pgn
 import io
-import numpy as np
+
 
 
 def get_color(headers, name):

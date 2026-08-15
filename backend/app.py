@@ -4,7 +4,15 @@ from get_games.lichess import get_games as get_lichess_games
 from get_games.chesscom import get_games as get_chesscom_games
 from parse_games import parse_games
 
-app = Flask(__name__)
+app = Flask(__name__) 
+
+@app.after_request
+def add_cors_headers(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+
+
 
 def get_games(user, site):
     if site == "lichess":

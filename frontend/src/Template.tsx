@@ -31,7 +31,7 @@ const Template: FC<Props> = props => {
       const load = async () => {
         try {
           const response = await fetch(
-            `https://danbock.net/longthinksapi/${props.site}/${props.username}`,
+            `https://longthinks-api.vercel.app/${site}/${username}`,
           )
           const { thinks } = (await response.json()) as { thinks: Think[] }
           setThinks(thinks)

@@ -9,7 +9,7 @@ const Page: FC = () => {
 
   useEffect(() => {
     // This useEffect is for prod only - urlSite and urlUsername are undefined in dev
-    const [urlSite, urlUsername] = window.location.pathname.split('/').slice(2, 4)
+    const [urlSite, urlUsername] = window.location.pathname.split('/').slice(1, 3)
     console.log({ urlSite, urlUsername })
 
     if (isSite(urlSite)) {
